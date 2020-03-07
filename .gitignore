@@ -29,6 +29,7 @@ nb-configuration.xml
 
 # Misc
 **/res
+**/resources
 *.swp
 release.properties
 pom.xml.releaseBackup

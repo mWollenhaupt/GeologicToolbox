@@ -123,7 +123,6 @@ public class IoSurfaceWriter extends IoAbstractWriter
     {
         int i = 0;
         if (format.equalsIgnoreCase(IoFormatType.VTK_DATASET)) i = 1;
-        else if(format.equalsIgnoreCase(IoFormatType.SHP)) i = 2;
         // --> add more formats here...
 
         try {

@@ -160,7 +160,7 @@ public class IoWellCsvReader
 					_markerName = this.scanMarkerName(tokens, coordIndex + 4);
 					
 					if (_wellName != null && _x != null && _y != null && _z != null && _markerName != null) {
-						VgPoint loc = new GmPoint(_x, _y, _z);
+						VgPoint loc = new GmPoint(_x, _y, _z+_md);
 						wRepo.addMarker(_wellName, loc, _md, _markerName);
 					}
 					

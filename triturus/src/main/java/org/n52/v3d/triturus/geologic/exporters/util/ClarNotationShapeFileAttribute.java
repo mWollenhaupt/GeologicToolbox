@@ -56,7 +56,7 @@ public class ClarNotationShapeFileAttribute extends ShapeFileAttribute {
 
     public ClarNotationShapeFileAttribute(boolean dip, boolean dipDir, boolean strike, boolean compassDirection) {
         this.dip = dip;
-        this.dipDir = dip;
+        this.dipDir = dipDir;
         this.strike = strike;
         this.compassDirection = compassDirection;
     }
@@ -74,7 +74,7 @@ public class ClarNotationShapeFileAttribute extends ShapeFileAttribute {
             sftBuilder.add("dip", Double.class);
         }
         if (dipDir) {
-            sftBuilder.add("reserviert", Double.class);
+            sftBuilder.add("dipdir", Double.class);
         }
         if (strike) {
             sftBuilder.add("strike", Double.class);
@@ -105,7 +105,7 @@ public class ClarNotationShapeFileAttribute extends ShapeFileAttribute {
             sfBuilder.add(orient.dip());
         }
         if (dipDir) {
-            sfBuilder.add(42.);
+            sfBuilder.add(0);   // TODO: Funktion implementieren
         }
         if (strike) {
             sfBuilder.add(orient.azimuth());
